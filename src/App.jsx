@@ -8,7 +8,7 @@ function App() {
 		<>
 			<Canvas camera={{ position: [0, 0, 1], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
 				<ambientLight intensity={0.5} />
-				<Squirtle />
+				<Squirtle position={[0, -0.4, 0]} />
 			</Canvas>
 		</>
 	);
