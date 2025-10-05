@@ -11,7 +11,7 @@ function App() {
 	return (
 		<>
 			<Canvas camera={{ position: [0, 0, 1.5], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
-				<OrbitControls minPolarAngle={1} maxPolarAngle={2} minAzimuthAngle={-0.7} maxAzimuthAngle={0.7} minDistance={1} maxDistance={1.5} />
+				<OrbitControls minPolarAngle={0.7} maxPolarAngle={1.7} minAzimuthAngle={-0.7} maxAzimuthAngle={0.7} minDistance={1} maxDistance={1.5} />
 				<ambientLight intensity={0.5} />
 				<directionalLight position={[0, 1, 1]} color={"#c10404"} intensity={2.5} />
 				<directionalLight position={[-4, 4, 1]} color={"#9214d1"} intensity={2.5} />
