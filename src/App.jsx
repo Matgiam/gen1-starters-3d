@@ -5,15 +5,16 @@ import Squirtle from "./components/Squirtle";
 import Charmander from "./components/Charmander";
 import Bulbasaur from "./components/Bulbasaur";
 import Platform from "./components/Round_platform";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Environment } from "@react-three/drei";
 
 function App() {
 	return (
 		<>
 			<Canvas camera={{ position: [0, 0, 1.5], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
+				<Environment files={"../images/clouds.jpeg"} background blur={0.1} backgroundRotation={[0, 1, 0]} />
 				<OrbitControls
 					// Limits how far the camera can tilt vertically (up/down)
-					minPolarAngle={0.7} // Minimum vertical angle (prevents going too high)
+					minPolarAngle={1.2} // Minimum vertical angle (prevents going too high)
 					maxPolarAngle={1.7} // Maximum vertical angle (prevents going too low)
 					// Limits how far the camera can rotate horizontally (left/right)
 					// Negative = left, Positive = right
@@ -23,9 +24,10 @@ function App() {
 					minDistance={1} // How close you can zoom in
 					maxDistance={2} // How far you can zoom out
 				/>
-				<ambientLight intensity={0.5} />
-				<directionalLight position={[0, 1, 1]} color={"#c10404"} intensity={2.5} />
+
+				<directionalLight position={[0, 1, 1]} color={"#c10404"} intensity={0.5} />
 				<directionalLight position={[-4, 4, 1]} color={"#9214d1"} intensity={2.5} />
+				<directionalLight position={[0, 4, -2]} color={"#af7500"} intensity={1.5} />
 				<Charmander position={[-0.7, -0.51, -0.2]} />
 				<Squirtle position={[0, -0.4, 0]} />
 				<Bulbasaur position={[0.7, -0.4, -0.2]} />
