@@ -20,10 +20,32 @@ function App() {
 		// });
 		return (
 			<mesh ref={ref}>
-				<Charmander onClick={() => setPokemon("Charmander")} position={[-0.7, -0.51, -0.3]} />
-				<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
-				<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0.7, -0.4, -0.3]} />
-				<Platform position={[0, -0.435, -0.2]} />
+				{pokemon == "" && (
+					<>
+						<Charmander onClick={() => setPokemon("Charmander")} position={[-0.7, -0.51, -0.3]} />
+						<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
+						<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0.7, -0.4, -0.3]} />
+						<Platform position={[0, -0.435, -0.2]} />
+					</>
+				)}
+				{pokemon == "Charmander" && (
+					<>
+						<Charmander onClick={() => setPokemon("Charmander")} position={[0, -0.51, 0]} />
+						<Platform position={[0, -0.435, -0.2]} />
+					</>
+				)}
+				{pokemon == "Squirtle" && (
+					<>
+						<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
+						<Platform position={[0, -0.435, -0.2]} />
+					</>
+				)}
+				{pokemon == "Bulbasaur" && (
+					<>
+						<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0, -0.4, -0]} />
+						<Platform position={[0, -0.435, -0.2]} />
+					</>
+				)}
 			</mesh>
 		);
 	};
