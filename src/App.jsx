@@ -5,21 +5,24 @@ import Squirtle from "./components/Squirtle";
 import Charmander from "./components/Charmander";
 import Bulbasaur from "./components/Bulbasaur";
 import Platform from "./components/Round_platform";
-import { OrbitControls, Environment } from "@react-three/drei";
+import { OrbitControls, Environment, Html } from "@react-three/drei";
 
 function App() {
+	const [pokemon, setPokemon] = useState("");
+
+	console.log(pokemon);
 	const Rotating = () => {
 		const ref = useRef();
-		useFrame(() => {
-			if (ref.current) {
-				ref.current.rotation.y -= 0.001;
-			}
-		});
+		// useFrame(() => {
+		// 	if (ref.current) {
+		// 		ref.current.rotation.y -= 0.001;
+		// 	}
+		// });
 		return (
 			<mesh ref={ref}>
-				<Charmander position={[-0.7, -0.51, -0.3]} />
-				<Squirtle position={[0, -0.4, 0]} />
-				<Bulbasaur position={[0.7, -0.4, -0.3]} />
+				<Charmander onClick={() => setPokemon("Charmander")} position={[-0.7, -0.51, -0.3]} />
+				<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
+				<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0.7, -0.4, -0.3]} />
 				<Platform position={[0, -0.435, -0.2]} />
 			</mesh>
 		);
@@ -41,7 +44,6 @@ function App() {
 					minDistance={1} // How close you can zoom in
 					maxDistance={2.5} // How far you can zoom out
 					enablePan={false} //Disable the fact that you can drag the object
-					
 				/>
 
 				<directionalLight position={[0, 1, 1]} color={"#c10404"} intensity={0.5} />
