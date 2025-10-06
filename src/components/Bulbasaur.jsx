@@ -10,7 +10,7 @@ Title: Pokemon Sword & Shield Bulbasaur Model
 import React from "react";
 import { useGLTF } from "@react-three/drei";
 
-export function Bulbasaur(props) {
+function Bulbasaur(props) {
 	const { nodes, materials } = useGLTF("/models/bulbasaur.glb");
 	return (
 		<group {...props} dispose={null}>

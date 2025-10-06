@@ -32,18 +32,27 @@ function App() {
 					<>
 						<Charmander onClick={() => setPokemon("Charmander")} position={[0, -0.51, 0]} />
 						<Platform position={[0, -0.435, -0.2]} />
+						<Html>
+							<button onClick={() => setPokemon("")}>go back</button>
+						</Html>
 					</>
 				)}
 				{pokemon == "Squirtle" && (
 					<>
 						<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
 						<Platform position={[0, -0.435, -0.2]} />
+						<Html>
+							<button onClick={() => setPokemon("")}>go back</button>
+						</Html>
 					</>
 				)}
 				{pokemon == "Bulbasaur" && (
 					<>
 						<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0, -0.4, -0]} />
 						<Platform position={[0, -0.435, -0.2]} />
+						<Html>
+							<button onClick={() => setPokemon("")}>go back</button>
+						</Html>
 					</>
 				)}
 			</mesh>
