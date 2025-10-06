@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"pokemon": "Charmander",
+		"description": "Charmander is a bipedal, reptilian Pokémon with a primarily orange body and blue eyes. Its underside from the chest down and the soles of its feet are cream-colored. A fire burns at the tip of its tail, which has blazed since birth.",
+		"height": "0.6 m",
+		"weight": "8.5 kg",
+		"type": "Fire",
+		"weaknesses": ["Water", "Ground", "Rock"]
+	},
+	{
+		"id": 2,
+		"pokemon": "Squirtle",
+		"description": "Squirtle is a small reptilian Pokémon that resembles a light-blue turtle. It typically walks on two legs but can run on all fours. Its body is encased by a tough shell that hardens after birth.",
+		"height": "0.5 m",
+		"weight": "9.0 kg",
+		"type": "Water",
+		"weaknesses": ["Electric", "Grass"]
+	},
+	{
+		"id": 3,
+		"pokemon": "Bulbasaur",
+		"description": "Bulbasaur is a small, quadrupedal amphibian Pokémon with blue-green skin and darker patches. It has red eyes, pointed ear-like structures, and a short blunt snout. Each of its thick legs ends with three sharp claws.",
+		"height": "0.7 m",
+		"weight": "6.9 kg",
+		"type": "Grass/Poison",
+		"weaknesses": ["Fire", "Ice", "Flying", "Psychic"]
+	}
+]

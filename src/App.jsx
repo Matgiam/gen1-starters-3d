@@ -6,11 +6,12 @@ import Charmander from "./components/Charmander";
 import Bulbasaur from "./components/Bulbasaur";
 import Platform from "./components/Round_platform";
 import { OrbitControls, Environment, Html } from "@react-three/drei";
+import DATA from "../src/data/Pokemons.json";
 
 function App() {
 	const [pokemon, setPokemon] = useState("");
-
 	console.log(pokemon);
+	console.log(DATA);
 	const Rotating = () => {
 		const ref = useRef();
 		// useFrame(() => {
@@ -25,13 +26,13 @@ function App() {
 						<Charmander onClick={() => setPokemon("Charmander")} position={[-0.7, -0.51, -0.3]} />
 						<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
 						<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0.7, -0.4, -0.3]} />
-						<Platform position={[0, -0.435, -0.2]} />
+						<Platform position={[0, -0.435, -0.35]} />
 					</>
 				)}
 				{pokemon == "Charmander" && (
 					<>
 						<Charmander onClick={() => setPokemon("Charmander")} position={[0, -0.51, 0]} />
-						<Platform position={[0, -0.435, -0.2]} />
+						<Platform position={[0, -0.435, -0.35]} />
 						<Html>
 							<button onClick={() => setPokemon("")}>go back</button>
 						</Html>
@@ -40,7 +41,7 @@ function App() {
 				{pokemon == "Squirtle" && (
 					<>
 						<Squirtle onClick={() => setPokemon("Squirtle")} position={[0, -0.4, 0]} />
-						<Platform position={[0, -0.435, -0.2]} />
+						<Platform position={[0, -0.435, -0.35]} />
 						<Html>
 							<button onClick={() => setPokemon("")}>go back</button>
 						</Html>
@@ -49,7 +50,7 @@ function App() {
 				{pokemon == "Bulbasaur" && (
 					<>
 						<Bulbasaur onClick={() => setPokemon("Bulbasaur")} position={[0, -0.4, -0]} />
-						<Platform position={[0, -0.435, -0.2]} />
+						<Platform position={[0, -0.435, -0.35]} />
 						<Html>
 							<button onClick={() => setPokemon("")}>go back</button>
 						</Html>
@@ -58,7 +59,6 @@ function App() {
 			</mesh>
 		);
 	};
-
 	return (
 		<>
 			<Canvas camera={{ position: [0, 0, 1.7], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
