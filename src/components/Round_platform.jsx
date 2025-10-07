@@ -7,18 +7,18 @@ Source: https://sketchfab.com/3d-models/round-platform-64de8f896e3e40e4a1e8a67d0
 Title: round platform
 */
 
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import React from "react";
+import { useGLTF } from "@react-three/drei";
 
- function Platform (props) {
-  const { nodes, materials } = useGLTF('/models/round_platform.glb')
-  return (
-    <group {...props} dispose={null} scale={0.5}>
-      <mesh geometry={nodes.pCylinder1_defaultPolygonShader1_0.geometry} material={materials.defaultPolygonShader1} scale={0.01} />
-    </group>
-  )
+function Platform(props) {
+	const { nodes, materials } = useGLTF("/models/round_platform.glb");
+	return (
+		<group {...props} dispose={null} scale={0.5}>
+			<mesh geometry={nodes.pCylinder1_defaultPolygonShader1_0.geometry} material={materials.defaultPolygonShader1} scale={0.01} />
+		</group>
+	);
 }
 
-useGLTF.preload('/models/round_platform.glb')
+useGLTF.preload("/models/round_platform.glb");
 
 export default Platform;
