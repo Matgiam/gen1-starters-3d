@@ -1,19 +1,13 @@
-import { useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import "./index.css";
-import Squirtle from "./components/Squirtle";
-import Charmander from "./components/Charmander";
-import Bulbasaur from "./components/Bulbasaur";
 import Scene from "./components/Scene";
-import Platform from "./components/Round_platform";
 import { OrbitControls, Environment, Html } from "@react-three/drei";
-import DATA from "../src/data/Pokemons.json";
 
 function App() {
 	return (
 		<>
-			<Canvas camera={{ position: [0, 0, 2], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
-				<Environment files={"../images/clouds.jpeg"} background  backgroundRotation={[0, 0, 0]} />
+			<Canvas camera={{ position: [0, 0, 10], fov: 100 }} style={{ width: "100vw", height: "100vh" }}>
+				<Environment files={"../images/clouds.jpeg"} background backgroundRotation={[0, 0, 0]} />
 				<OrbitControls
 					// Limits how far the camera can tilt vertically (up/down)
 					minPolarAngle={1.2} // Minimum vertical angle (prevents going too high)
@@ -23,8 +17,8 @@ function App() {
 					minAzimuthAngle={-0.7} // Rotate limit to the left
 					maxAzimuthAngle={0.7} // Rotate limit to the right
 					// Controls zoom distance between camera and model
-					minDistance={2} // How close you can zoom in
-					maxDistance={2} // How far you can zoom out
+					minDistance={1.5} // How close you can zoom in
+					maxDistance={1.5} // How far you can zoom out
 					enablePan={false} //Disable the fact that you can drag the object
 				/>
 
