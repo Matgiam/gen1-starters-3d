@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Html } from "@react-three/drei";
+import { Html, OrbitControls } from "@react-three/drei";
 import DATA from "../data/Pokemons.json";
 import Squirtle from "./Squirtle";
 import Charmander from "./Charmander";
@@ -8,8 +8,8 @@ import Platform from "./Round_platform";
 import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
 
-function Scene1({setPokemon}) {
-    const pokeData = DATA.find((p) => p.pokemon === "Charmander");
+function Scene1({ setPokemon }) {
+	const pokeData = DATA.find((p) => p.pokemon === "Charmander");
 	return (
 		<group>
 			<Charmander position={[0, -0.51, 0.2]} />

@@ -12,7 +12,7 @@ import DATA from "../data/Pokemons.json";
 import Scene1 from "./Scene1";
 import Scene3 from "./Scene3";
 
-function Scene() {
+function Scene({ moveCameraTo }) {
 	const [pokemon, setPokemon] = useState("");
 
 	if (pokemon === "") {
@@ -29,7 +29,7 @@ function Scene() {
 		return <Scene1 setPokemon={setPokemon} />;
 	}
 	if (pokemon === "Squirtle") {
-		return <Scene2 setPokemon={setPokemon} />;
+		return <Scene2 setPokemon={setPokemon} moveCameraTo={moveCameraTo} />;
 	}
 	if (pokemon === "Bulbasaur") {
 		return <Scene3 setPokemon={setPokemon} />;

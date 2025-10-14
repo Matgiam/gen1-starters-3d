@@ -18,7 +18,7 @@ import { SkeletonUtils } from 'three-stdlib'
   const { nodes, materials } = useGraph(clone)
   return (
     <group {...props} dispose={null}>
-      <group scale={0.010}>
+      <group scale={0.010} rotation={[0,1,0]}>
         <primitive object={nodes._rootJoint} />
         <skinnedMesh geometry={nodes.Object_6.geometry} material={materials.Material_72} skeleton={nodes.Object_6.skeleton} />
         <skinnedMesh geometry={nodes.Object_7.geometry} material={materials.Material_73} skeleton={nodes.Object_7.skeleton} />
