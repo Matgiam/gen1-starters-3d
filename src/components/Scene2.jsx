@@ -3,18 +3,20 @@ import { Html } from "@react-three/drei";
 import DATA from "../data/Pokemons.json";
 import Squirtle from "./Squirtle";
 import Charmander from "./Charmander";
+import Wartortle from "./Wartortle";
+import Blastoise from "./Blastoise";
 import Bulbasaur from "./Bulbasaur";
 import Platform from "./Round_platform";
 import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
 
-function Scene1({setPokemon}) {
-    const pokeData = DATA.find((p) => p.pokemon === "Charmander");
+function Scene2({setPokemon}) {
+    const pokeData = DATA.find((p) => p.pokemon === "Squirtle");
 	return (
 		<group>
-			<Charmander position={[0, -0.51, 0.2]} />
-			<Charmeleon position={[-4, -0.34, -2]} />
-			<Charizard position={[4.3, -0.39, -3]} />
+			<Squirtle position={[0, -0.39, 0.2]} />
+			<Wartortle position={[-4, -0.39, -2]} />
+			<Blastoise position={[4.3, -0.39, -3]} />
 			<Platform position={[4, -0.435, -3]} />
 			<Platform position={[-4, -0.435, -2]} />
 			<Platform position={[0, -0.435, -0.3]} />
@@ -47,4 +49,4 @@ function Scene1({setPokemon}) {
 	);
 }
 
-export default Scene1;
+export default Scene2;

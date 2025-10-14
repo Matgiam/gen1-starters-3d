@@ -18,7 +18,7 @@ function Blastoise(props) {
   const { nodes, materials } = useGraph(clone)
   return (
     <group {...props} dispose={null}>
-      <group scale={0.01}>
+      <group scale={0.005}>
         <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
           <primitive object={nodes._rootJoint} />
           <skinnedMesh geometry={nodes.Object_7.geometry} material={materials['5_pm0009.material01_1_0_0']} skeleton={nodes.Object_7.skeleton} />

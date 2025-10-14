@@ -12,13 +12,13 @@ import { useGraph } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-export function Model(props) {
-  const { scene } = useGLTF('/wartortle.glb')
+ function Wartortle(props) {
+  const { scene } = useGLTF('/models/wartortle.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   return (
     <group {...props} dispose={null}>
-      <group scale={0.025}>
+      <group scale={0.010}>
         <primitive object={nodes._rootJoint} />
         <skinnedMesh geometry={nodes.Object_6.geometry} material={materials.Material_72} skeleton={nodes.Object_6.skeleton} />
         <skinnedMesh geometry={nodes.Object_7.geometry} material={materials.Material_73} skeleton={nodes.Object_7.skeleton} />
@@ -28,4 +28,6 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/wartortle.glb')
+useGLTF.preload('/models/wartortle.glb')
+
+export default Wartortle;

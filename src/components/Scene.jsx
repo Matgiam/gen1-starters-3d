@@ -7,7 +7,7 @@ import Bulbasaur from "./Bulbasaur";
 import Platform from "./Round_platform";
 import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
-
+import Scene2 from "./Scene2";
 import DATA from "../data/Pokemons.json";
 import Scene1 from "./Scene1";
 
@@ -25,7 +25,10 @@ function Scene() {
 		);
 	}
 	if (pokemon === "Charmander") {
-		return <Scene1 />;
+		return <Scene1 setPokemon={setPokemon} />;
+	}
+	if (pokemon === "Squirtle") {
+		return <Scene2 setPokemon={setPokemon} />;
 	}
 }
 
