@@ -10,6 +10,7 @@ import Charizard from "./Charizard";
 import Scene2 from "./Scene2";
 import DATA from "../data/Pokemons.json";
 import Scene1 from "./Scene1";
+import Scene3 from "./Scene3";
 
 function Scene() {
 	const [pokemon, setPokemon] = useState("");
@@ -29,6 +30,9 @@ function Scene() {
 	}
 	if (pokemon === "Squirtle") {
 		return <Scene2 setPokemon={setPokemon} />;
+	}
+	if (pokemon === "Bulbasaur") {
+		return <Scene3 setPokemon={setPokemon} />;
 	}
 }
 

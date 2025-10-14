@@ -3,20 +3,20 @@ import { Html } from "@react-three/drei";
 import DATA from "../data/Pokemons.json";
 import Squirtle from "./Squirtle";
 import Charmander from "./Charmander";
-import Wartortle from "./Wartortle";
-import Blastoise from "./Blastoise";
+import Venusaur from "./Venusaur";
 import Bulbasaur from "./Bulbasaur";
 import Platform from "./Round_platform";
 import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
+import Ivysaur from "./Ivysaur";
 
-function Scene2({setPokemon}) {
-    const pokeData = DATA.find((p) => p.pokemon === "Squirtle");
+function Scene3({setPokemon}) {
+    const pokeData = DATA.find((p) => p.pokemon === "Bulbasaur");
 	return (
 		<group>
-			<Squirtle position={[0, -0.39, 0.2]}onClick={() => console.log("clicked")} />
-			<Wartortle position={[-4, -0.39, -2]} onClick={() => console.log("clicked")}/>
-			<Blastoise position={[4.3, -0.39, -3]}  onClick={() => console.log("clicked")}/>
+			<Bulbasaur position={[0, -0.39, 0.2]} />
+			<Ivysaur position={[-4, -0.39, -2]} />
+			<Venusaur position={[4.3, -0.39, -3]} />
 			<Platform position={[4, -0.435, -3]} />
 			<Platform position={[-4, -0.435, -2]} />
 			<Platform position={[0, -0.435, -0.3]} />
@@ -49,4 +49,4 @@ function Scene2({setPokemon}) {
 	);
 }
 
-export default Scene2;
+export default Scene3;

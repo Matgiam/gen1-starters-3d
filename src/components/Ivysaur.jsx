@@ -18,7 +18,7 @@ function Ivysaur (props) {
   const { nodes, materials } = useGraph(clone)
   return (
     <group {...props} dispose={null}>
-      <group scale={0.025}>
+      <group scale={0.008}>
         <primitive object={nodes._rootJoint} />
         <skinnedMesh geometry={nodes.Object_6.geometry} material={materials.Material_46} skeleton={nodes.Object_6.skeleton} />
         <skinnedMesh geometry={nodes.Object_7.geometry} material={materials.Material_47} skeleton={nodes.Object_7.skeleton} />
