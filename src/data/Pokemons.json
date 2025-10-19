@@ -11,7 +11,7 @@
 	{
 		"id": 2,
 		"pokemon": "Squirtle",
-		"description": "Squirtle is a small reptilian Pokémon that resembles a light-blue turtle. It typically walks on two legs but can run on all fours. Its body is encased by a tough shell that hardens after birth.",
+		"description": "After birth, its back swells and hardens into a shell. It sprays a potent foam from its mouth.",
 		"height": "0.5 m",
 		"weight": "9.0 kg",
 		"type": "Water",
@@ -20,7 +20,7 @@
 	{
 		"id": 3,
 		"pokemon": "Bulbasaur",
-		"description": "Bulbasaur is a small, quadrupedal amphibian Pokémon with blue-green skin and darker patches. It has red eyes, pointed ear-like structures, and a short blunt snout. Each of its thick legs ends with three sharp claws.",
+		"description": "For some time after its birth, it uses the nutrients that are packed into the seed on its back in order to grow.",
 		"height": "0.7 m",
 		"weight": "6.9 kg",
 		"type": "Grass/Poison",
