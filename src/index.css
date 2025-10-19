@@ -1,29 +1,8 @@
 body {
 	background-color: black;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.name {
-	width: 350px;
-	padding: 10px;
-	margin-left: -5vw;
-	margin-top: -32vh;
-}
-.description {
-	margin-top:10vh;
-	width: 260px;
-	margin-left: -26vw;
-	background-color: white;
-	padding: 10px;
-}
-
-.details {
-	background-color: white;
-	width: 260px;
-	margin-top: -14.5vh;
-	margin-left: 9vw;
-		padding: 10px;
-}
 button {
 	background: none;
 	border: none;
@@ -38,7 +17,8 @@ button:hover {
 	background-color: rgb(167, 1, 1);
 }
 
-.pokemon-button{
-	margin-top:30vh;
-	margin-left: -2vw;
+.pokemon-button {
+	width: 100px;
 }
+
+

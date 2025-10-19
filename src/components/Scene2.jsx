@@ -11,7 +11,7 @@ function Scene2({ moveCameraTo,setPokemon }) {
   return (
     <group>
       <Squirtle
-        position={[0, -0.39, 0.2]}
+        position={[0, -0.4, 0]}
         onClick={() => moveCameraTo(0, 0, 0)} 
       />
       <Platform position={[0, -0.435, -0.3]} />
@@ -29,7 +29,7 @@ function Scene2({ moveCameraTo,setPokemon }) {
       <Platform position={[4, -0.435, -3]} />
 
       <Html distanceFactor={3} position={[-0.05, 0.1, 0.1]}>
-        {/* <div className="name">
+        <div className="name">
           <h2>{pokeData.pokemon}</h2>
         </div>
         <div className="description">
@@ -48,7 +48,7 @@ function Scene2({ moveCameraTo,setPokemon }) {
           <p>
             <strong>Weaknesses:</strong> {pokeData.weaknesses}
           </p>
-        </div> */}
+        </div>
         <div className="pokemon-button">
   					<button onClick={() => setPokemon("")}>Go Back</button>
         </div>

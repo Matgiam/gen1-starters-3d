@@ -26,13 +26,13 @@ function Scene({ moveCameraTo }) {
 		);
 	}
 	if (pokemon === "Charmander") {
-		return <Scene1 setPokemon={setPokemon} />;
+		return <Scene1 setPokemon={setPokemon} moveCameraTo={moveCameraTo} />;
 	}
 	if (pokemon === "Squirtle") {
 		return <Scene2 setPokemon={setPokemon} moveCameraTo={moveCameraTo} />;
 	}
 	if (pokemon === "Bulbasaur") {
-		return <Scene3 setPokemon={setPokemon} />;
+		return <Scene3 setPokemon={setPokemon} moveCameraTo={moveCameraTo} />;
 	}
 }
 

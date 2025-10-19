@@ -8,23 +8,27 @@ import Platform from "./Round_platform";
 import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
 
-function Scene1({ setPokemon }) {
+function Scene1({ setPokemon, moveCameraTo }) {
 	const pokeData = DATA.find((p) => p.pokemon === "Charmander");
 	return (
 		<group>
-			<Charmander position={[0, -0.51, 0.2]} />
-			<Charmeleon position={[-4, -0.34, -2]} />
-			<Charizard position={[4.3, -0.39, -3]} />
-			<Platform position={[4, -0.435, -3]} />
-			<Platform position={[-4, -0.435, -2]} />
+			<Charmander position={[0, -0.51, 0]} onClick={() => moveCameraTo(0, 0, 0)} />
+			<Charmeleon position={[-4, -0.34, -2]} onClick={() => moveCameraTo(-3.5, 0, -2.5)} />
+			<Charizard position={[4.3, -0.39, -3]} onClick={() => moveCameraTo(4.5, 0.5, -2)} />
+			<Platform position={[4.5, -0.435, -3]} />
+			<Platform position={[-4, -0.435, -2.2]} />
 			<Platform position={[0, -0.435, -0.3]} />
-			<Html distanceFactor={3} position={[-0.05, 0.1, 0.1]}>
+			<Html distanceFactor={3} position={[-0.15, 0.6, 0.1]}>
 				<div className="name">
 					<h2>{pokeData.pokemon}</h2>
 				</div>
+			</Html>
+			<Html distanceFactor={3} position={[-0.75, 0.3, 0.1]}>
 				<div className="description">
 					<p>{pokeData.description}</p>
 				</div>
+			</Html>
+			<Html distanceFactor={3} position={[0.45, 0.3, 0.1]}>
 				<div className="details">
 					<p>
 						<strong>Type:</strong> {pokeData.type}
@@ -39,9 +43,17 @@ function Scene1({ setPokemon }) {
 						<strong>Weaknesses:</strong> {pokeData.weaknesses}
 					</p>
 				</div>
+			</Html>
+			<Html distanceFactor={3} position={[-0.1, -0.5, 0.3]}>
 				<div className="pokemon-button">
-					<button onClick={() => setPokemon("")}>Go Back</button>
+					<button onClick={() => setPokemon("")}>
+						{" "}
+						<p>Go Back</p>
+					</button>
 				</div>
+			</Html>
+			<Html distanceFactor={5} position={[-3.5, 1.5, -3.5]}>
+				<h2>Hello</h2>
 			</Html>
 		</group>
 	);

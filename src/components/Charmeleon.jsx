@@ -12,14 +12,14 @@ import { useGraph } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { SkeletonUtils } from "three-stdlib";
 
-function Charmeleon(props) {
+function Charmeleon(props, ) {
 	const { scene } = useGLTF("/models/charmeleon.glb");
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
 	return (
 		<group {...props} dispose={null}>
 			<group scale={0.01}>
-				<group scale={120}>
+				<group scale={120} rotation={[0,1.2,0]}>
 					<primitive object={nodes._rootJoint} />
 					<skinnedMesh geometry={nodes.Object_59.geometry} material={materials.body} skeleton={nodes.Object_59.skeleton} />
 					<skinnedMesh geometry={nodes.Object_60.geometry} material={materials.r_eye} skeleton={nodes.Object_60.skeleton} />

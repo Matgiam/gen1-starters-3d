@@ -7,28 +7,28 @@ Source: https://sketchfab.com/3d-models/ivysaur-c5d3643257084bfa8e84fcd2c89c3993
 Title: Ivysaur
 */
 
-import React from 'react'
-import { useGraph } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
-import { SkeletonUtils } from 'three-stdlib'
+import React from "react";
+import { useGraph } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import { SkeletonUtils } from "three-stdlib";
 
-function Ivysaur (props) {
-  const { scene } = useGLTF('/models/ivysaur.glb')
-  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
-  const { nodes, materials } = useGraph(clone)
-  return (
-    <group {...props} dispose={null}>
-      <group scale={0.008}>
-        <primitive object={nodes._rootJoint} />
-        <skinnedMesh geometry={nodes.Object_6.geometry} material={materials.Material_46} skeleton={nodes.Object_6.skeleton} />
-        <skinnedMesh geometry={nodes.Object_7.geometry} material={materials.Material_47} skeleton={nodes.Object_7.skeleton} />
-        <skinnedMesh geometry={nodes.Object_8.geometry} material={materials.Material_48} skeleton={nodes.Object_8.skeleton} />
-        <skinnedMesh geometry={nodes.Object_9.geometry} material={materials.Material_49} skeleton={nodes.Object_9.skeleton} />
-      </group>
-    </group>
-  )
+function Ivysaur(props) {
+	const { scene } = useGLTF("/models/ivysaur.glb");
+	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
+	const { nodes, materials } = useGraph(clone);
+	return (
+		<group {...props} dispose={null}>
+			<group scale={0.008} rotation={[0, 1.2, 0]}>
+				<primitive object={nodes._rootJoint} />
+				<skinnedMesh geometry={nodes.Object_6.geometry} material={materials.Material_46} skeleton={nodes.Object_6.skeleton} />
+				<skinnedMesh geometry={nodes.Object_7.geometry} material={materials.Material_47} skeleton={nodes.Object_7.skeleton} />
+				<skinnedMesh geometry={nodes.Object_8.geometry} material={materials.Material_48} skeleton={nodes.Object_8.skeleton} />
+				<skinnedMesh geometry={nodes.Object_9.geometry} material={materials.Material_49} skeleton={nodes.Object_9.skeleton} />
+			</group>
+		</group>
+	);
 }
 
-useGLTF.preload('/models/ivysaur.glb')
+useGLTF.preload("/models/ivysaur.glb");
 
 export default Ivysaur;

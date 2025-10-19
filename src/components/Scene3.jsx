@@ -10,14 +10,14 @@ import Charmeleon from "./Charmeleon";
 import Charizard from "./Charizard";
 import Ivysaur from "./Ivysaur";
 
-function Scene3({setPokemon}) {
-    const pokeData = DATA.find((p) => p.pokemon === "Bulbasaur");
+function Scene3({ setPokemon, moveCameraTo }) {
+	const pokeData = DATA.find((p) => p.pokemon === "Bulbasaur");
 	return (
 		<group>
-			<Bulbasaur position={[0, -0.39, 0.2]} />
-			<Ivysaur position={[-4, -0.39, -2]} />
-			<Venusaur position={[4.3, -0.39, -3]} />
-			<Platform position={[4, -0.435, -3]} />
+			<Bulbasaur position={[0, -0.39, 0]} onClick={() => moveCameraTo(0, 0, 0)} />
+			<Ivysaur position={[-4, -0.39, -2]} onClick={() => moveCameraTo(-3.5, 0, -2.5)} />
+			<Venusaur position={[4.3, -0.39, -3]} onClick={() => moveCameraTo(4.5, 0, -2)} />
+			<Platform position={[4.3, -0.435, -3]} />
 			<Platform position={[-4, -0.435, -2]} />
 			<Platform position={[0, -0.435, -0.3]} />
 			<Html distanceFactor={3} position={[-0.05, 0.1, 0.1]}>
