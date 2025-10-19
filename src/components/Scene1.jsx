@@ -13,6 +13,7 @@ function Scene1({ setPokemon, moveCameraTo }) {
 	const pokeData = DATA.find((p) => p.pokemon === "Charmander");
 	return (
 		<group>
+			
 			<Charmander position={[0, -0.51, 0]} onClick={() => moveCameraTo(0, 0, 0)} />
 			<Charmeleon position={[0, -0.34, -8]} onClick={() => moveCameraTo(0, 0, -8)} />
 			<Charizard position={[4.3, -0.39, -11]} onClick={() => moveCameraTo(4.3, 0.5, -10)} />
@@ -50,7 +51,7 @@ function Scene1({ setPokemon, moveCameraTo }) {
 					</button>
 				</div>
 			</Html>
-			<Html distanceFactor={5} position={[-1.3, 1, -8]}>
+			<Html distanceFactor={5} position={[-1.8, 1, -8]}>
 				<div className="evolution">
 					<p>Evolves at level 18</p>
 				</div>

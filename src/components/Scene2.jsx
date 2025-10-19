@@ -48,7 +48,7 @@ function Scene2({ moveCameraTo, setPokemon }) {
 					</button>
 				</div>
 			</Html>
-			<Html distanceFactor={5} position={[-1.3, 1, -8]}>
+			<Html distanceFactor={5} position={[-1.8, 1, -8]}>
 				<div className="evolution">
 					<p>Evolves at level 18</p>
 				</div>
