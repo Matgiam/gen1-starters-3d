@@ -19,7 +19,7 @@ import { SkeletonUtils } from 'three-stdlib'
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
-        <group rotation={[0.016, 0, 0]} scale={100}>
+        <group rotation={[0.016, -0.5, 0]} scale={100}>
           <primitive object={nodes._rootJoint} />
           <skinnedMesh geometry={nodes.Object_340.geometry} material={materials['body_a.004']} skeleton={nodes.Object_340.skeleton} />
           <skinnedMesh geometry={nodes.Object_341.geometry} material={materials['body_b.005']} skeleton={nodes.Object_341.skeleton} />

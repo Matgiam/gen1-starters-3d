@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Html } from "@react-three/drei";
 
-import Squirtle from "./Squirtle";
-import Charmander from "./Charmander";
-import Bulbasaur from "./Bulbasaur";
-import Platform from "./Round_platform";
-import Charmeleon from "./Charmeleon";
-import Charizard from "./Charizard";
+import Squirtle from "./models/Squirtle";
+import Charmander from "./models/Charmander";
+import Bulbasaur from "./models/Bulbasaur";
+import Platform from "./models/Round_platform";
+import Charmeleon from "./models/Charmeleon";
+import Charizard from "./models/Charizard";
 import Scene2 from "./Scene2";
 import DATA from "../data/Pokemons.json";
+import Town from "./models/Town";
 import Scene1 from "./Scene1";
 import Scene3 from "./Scene3";
 
@@ -21,7 +22,7 @@ function Scene({ moveCameraTo }) {
 				<Charmander position={[-0.7, -0.51, -0.3]} onClick={() => setPokemon("Charmander")} />
 				<Squirtle position={[0, -0.4, 0]} onClick={() => setPokemon("Squirtle")} />
 				<Bulbasaur position={[0.7, -0.4, -0.3]} onClick={() => setPokemon("Bulbasaur")} />
-				<Platform position={[0, -0.435, -0.3]} />
+				<Town position={[0.7, -0.4, -26.3]} />
 			</group>
 		);
 	}

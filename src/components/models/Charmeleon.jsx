@@ -19,7 +19,7 @@ function Charmeleon(props, ) {
 	return (
 		<group {...props} dispose={null}>
 			<group scale={0.01}>
-				<group scale={120} rotation={[0,1.2,0]}>
+				<group scale={120} rotation={[0,0,0]}>
 					<primitive object={nodes._rootJoint} />
 					<skinnedMesh geometry={nodes.Object_59.geometry} material={materials.body} skeleton={nodes.Object_59.skeleton} />
 					<skinnedMesh geometry={nodes.Object_60.geometry} material={materials.r_eye} skeleton={nodes.Object_60.skeleton} />

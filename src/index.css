@@ -68,7 +68,6 @@ h2 {
 	font-size: 1.3rem;
 	color: var(--pokedex-dark-red);
 	background-color: var(--pokedex-white);
-	border: 3px solid var(--pokedex-border);
 	border-radius: 8px;
 	padding: 0.3rem 0.6rem;
 	display: inline-block;
@@ -81,5 +80,9 @@ h2 {
 
 .evolution p {
 	font-size: 3rem;
-	width: 500px;
+	width: 370px;
+	padding: 0.3rem 0.6rem;
+	background-color: var(--pokedex-white);
+	border-radius: 8px;
+	border: 3px solid var(--pokedex-red);
 }
