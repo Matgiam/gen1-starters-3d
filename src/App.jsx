@@ -27,8 +27,8 @@ function App() {
 				maxPolarAngle={1.7} // Maximum vertical angle (prevents going too low)
 				// Limits how far the camera can rotate horizontally (left/right)
 				// Negative = left, Positive = right
-				// minAzimuthAngle={-0.7} // Rotate limit to the left
-				// maxAzimuthAngle={0.7} // Rotate limit to the right
+				minAzimuthAngle={-0.7} // Rotate limit to the left
+				maxAzimuthAngle={0.7} // Rotate limit to the right
 				// Controls zoom distance between camera and model
 				minDistance={1.5} // How close you can zoom in
 				maxDistance={1.5} // How far you can zoom out
